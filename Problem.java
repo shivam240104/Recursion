@@ -43,7 +43,7 @@ public static int sum(int n){
      return Sum;
 }
 
-//  <<<<<problem-4>>>>>>   <<<<<< print dum of n numbers>>>>>>
+//  <<<<<problem-5>>>>>>   <<<<<< print fibbonacci of nth numbers>>>>>>
 
 public static int fab( int n){
     if(n==0){
@@ -57,6 +57,19 @@ public static int fab( int n){
     return Fab;
 }
 
+//  <<<<<problem-6>>>>>>   <<<<<< To check given array is sorted or not  >>>>>>
+
+public static boolean isSorted(int arr[], int i){
+    if(i == arr.length-1){
+        return true;
+    }
+    if(arr[i]>arr[i+1]){
+        return false;
+    }
+   return isSorted(arr, i+1);
+}
+
+
 
     public static void main (String []args){
         int n=10;
@@ -66,5 +79,8 @@ public static int fab( int n){
         System.out.println(fact(5));
         System.out.println(sum(n));
         System.out.println(fab(5));
+
+        int arr[]={1,2,3,4,5,6,7};
+       System.out.println(isSorted(arr, 0));
     }
 }
