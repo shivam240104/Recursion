@@ -43,6 +43,20 @@ public static int sum(int n){
      return Sum;
 }
 
+//  <<<<<problem-4>>>>>>   <<<<<< print dum of n numbers>>>>>>
+
+public static int fab( int n){
+    if(n==0){
+        return 0;
+    }
+    else if(n==1){
+        return 1;
+    }
+
+     int Fab=fab(n-1)+fab(n-2);
+    return Fab;
+}
+
 
     public static void main (String []args){
         int n=10;
@@ -51,5 +65,6 @@ public static int sum(int n){
 
         System.out.println(fact(5));
         System.out.println(sum(n));
+        System.out.println(fab(5));
     }
 }
