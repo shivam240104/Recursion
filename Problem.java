@@ -69,6 +69,18 @@ public static boolean isSorted(int arr[], int i){
    return isSorted(arr, i+1);
 }
 
+//  <<<<<problem-7>>>>>>   <<<<<< To find first occurance in array element >>>>>>
+
+public static int firstOcc(int array[],int key, int i){
+    if(i== array.length){
+        return -1;
+    }
+    if(array[i]==key){
+        return i;
+    }
+
+    return firstOcc(array,key,i+1);
+}
 
 
     public static void main (String []args){
@@ -82,5 +94,9 @@ public static boolean isSorted(int arr[], int i){
 
         int arr[]={1,2,3,4,5,6,7};
        System.out.println(isSorted(arr, 0));
+
+       int array[]={1,2,3,4,5,6,78,4,5,8,9};
+       System.out.println(firstOcc(array, 4, 0));
+
     }
 }
