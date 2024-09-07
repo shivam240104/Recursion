@@ -96,21 +96,38 @@ public static int lastOcc(int array[], int key, int i){
     return isFound;
 }
 
+//  <<<<<problem-10>>>>>>   <<<<<< To print a^n in o(logn) timecomplexcity >>>>>>
+
+public static int Optomized(int a, int n){
+    if(n==0){
+        return 1;
+    }
+int halfpower=Optomized(a, n/2);
+ int halfpowerSq= halfpower*halfpower;
+
+ // if n is odd 
+ if(n%2!=0){
+    halfpowerSq=a*halfpowerSq;
+ }
+return halfpowerSq;
+}
+
 
     public static void main (String []args){
-        int n=10;
-        printDec(n);
-        printInc(n);
+    //     int n=10;
+    //     printDec(n);
+    //     printInc(n);
 
-        System.out.println(fact(5));
-        System.out.println(sum(n));
-        System.out.println(fab(5));
+    //     System.out.println(fact(5));
+    //     System.out.println(sum(n));
+    //     System.out.println(fab(5));
 
-        int arr[]={1,2,3,4,5,6,7};
-       System.out.println(isSorted(arr, 0));
+    //     int arr[]={1,2,3,4,5,6,7};
+    //    System.out.println(isSorted(arr, 0));
 
-       int array[]={1,2,3,4,5,6,78,4,5,8,9};
-       System.out.println(lastOcc(array, 4, 0));
+    //    int array[]={1,2,3,4,5,6,78,4,5,8,9};
+    //    System.out.println(lastOcc(array, 4, 0));
+       System.out.println(Optomized(2, 10));
 
     }
 }
