@@ -82,6 +82,20 @@ public static int firstOcc(int array[],int key, int i){
     return firstOcc(array,key,i+1);
 }
 
+//  <<<<<problem-8>>>>>>   <<<<<< To find last occurance in array element >>>>>>
+
+public static int lastOcc(int array[], int key, int i){
+    if(i== array.length){
+        return -1;
+    }
+    int isFound= lastOcc(array, key, i+1);
+    if(isFound== -1 && array[i]==key){
+        return i;
+    }
+
+    return isFound;
+}
+
 
     public static void main (String []args){
         int n=10;
@@ -96,7 +110,7 @@ public static int firstOcc(int array[],int key, int i){
        System.out.println(isSorted(arr, 0));
 
        int array[]={1,2,3,4,5,6,78,4,5,8,9};
-       System.out.println(firstOcc(array, 4, 0));
+       System.out.println(lastOcc(array, 4, 0));
 
     }
 }
